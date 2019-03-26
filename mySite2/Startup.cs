@@ -4,8 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using mySite2.Data;
+using mySite2.Data.Interfaces;
+using mySite2.Data.Repository;
 
 namespace mySite2
 {
@@ -20,6 +24,10 @@ namespace mySite2
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<LibraryDbContext>(options => options.UseInMemoryDatabase("LibraryContext"));
+            services.AddTransient<ICustomerRepository, CustomerRepository>();
+            services.AddTransient<IBookRepository, BookRepository>();
+            services.AddTransient<IAuthorRepository, AuthorRepository>();
             services.AddMvc();
         }
 
@@ -43,6 +51,8 @@ namespace mySite2
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            DBInitialize.Seed(app);
         }
     }
 }

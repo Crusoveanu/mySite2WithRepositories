@@ -9,3 +9,14 @@ C:\Users\hy\Desktop\mySite2\mySite2\obj\Debug\netcoreapp2.0\mySite2.AssemblyInfo
 C:\Users\hy\Desktop\mySite2\mySite2\obj\Debug\netcoreapp2.0\mySite2.AssemblyInfo.cs
 C:\Users\hy\Desktop\mySite2\mySite2\obj\Debug\netcoreapp2.0\mySite2.dll
 C:\Users\hy\Desktop\mySite2\mySite2\obj\Debug\netcoreapp2.0\mySite2.pdb
+D:\Work - IT\C#\MVC\AspNet\Repositories\mySite2\mySite2\bin\Debug\netcoreapp2.0\mySite2.deps.json
+D:\Work - IT\C#\MVC\AspNet\Repositories\mySite2\mySite2\bin\Debug\netcoreapp2.0\mySite2.runtimeconfig.json
+D:\Work - IT\C#\MVC\AspNet\Repositories\mySite2\mySite2\bin\Debug\netcoreapp2.0\mySite2.runtimeconfig.dev.json
+D:\Work - IT\C#\MVC\AspNet\Repositories\mySite2\mySite2\bin\Debug\netcoreapp2.0\mySite2.dll
+D:\Work - IT\C#\MVC\AspNet\Repositories\mySite2\mySite2\bin\Debug\netcoreapp2.0\mySite2.pdb
+D:\Work - IT\C#\MVC\AspNet\Repositories\mySite2\mySite2\obj\Debug\netcoreapp2.0\mySite2.csprojAssemblyReference.cache
+D:\Work - IT\C#\MVC\AspNet\Repositories\mySite2\mySite2\obj\Debug\netcoreapp2.0\mySite2.csproj.CoreCompileInputs.cache
+D:\Work - IT\C#\MVC\AspNet\Repositories\mySite2\mySite2\obj\Debug\netcoreapp2.0\mySite2.AssemblyInfoInputs.cache
+D:\Work - IT\C#\MVC\AspNet\Repositories\mySite2\mySite2\obj\Debug\netcoreapp2.0\mySite2.AssemblyInfo.cs
+D:\Work - IT\C#\MVC\AspNet\Repositories\mySite2\mySite2\obj\Debug\netcoreapp2.0\mySite2.dll
+D:\Work - IT\C#\MVC\AspNet\Repositories\mySite2\mySite2\obj\Debug\netcoreapp2.0\mySite2.pdb

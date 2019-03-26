@@ -13118,11 +13118,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hy\\Desktop\\mySite2\\mySite2\\mySite2.csproj",
+      "projectUniqueName": "D:\\Work - IT\\C#\\MVC\\AspNet\\Repositories\\mySite2\\mySite2\\mySite2.csproj",
       "projectName": "mySite2",
-      "projectPath": "C:\\Users\\hy\\Desktop\\mySite2\\mySite2\\mySite2.csproj",
+      "projectPath": "D:\\Work - IT\\C#\\MVC\\AspNet\\Repositories\\mySite2\\mySite2\\mySite2.csproj",
       "packagesPath": "C:\\Users\\hy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hy\\Desktop\\mySite2\\mySite2\\obj\\",
+      "outputPath": "D:\\Work - IT\\C#\\MVC\\AspNet\\Repositories\\mySite2\\mySite2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Xamarin\\NuGet\\",
