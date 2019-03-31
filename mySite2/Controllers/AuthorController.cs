@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using mySite2.Data.Interfaces;
 using mySite2.Data.Model;
+using mySite2.ViewModel;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -24,51 +25,64 @@ namespace mySite2.Controllers
         {
             var authors = _authorRepository.GetAllWithBooks();
 
-            if(authors.Count() == 0)
-            {
-                return RedirectToAction("Empty");
-            }
+            if (authors.Count() == 0) return View("Empty");
 
             return View(authors);
         }
 
         public IActionResult Update(int id)
         {
-            var authors = _authorRepository.GetById(id);
+            var author = _authorRepository.GetById(id);
 
-            if (authors == null) return NotFound();
+            if (author == null) return NotFound();
 
-            return View(authors);
+            return View(author);
         }
+
         [HttpPost]
-        public IActionResult Update(Author authors)
+        public IActionResult Update(Author author)
         {
-            _authorRepository.Update(authors);
+            if (!ModelState.IsValid)
+            {
+                return View(author);
+            }
+
+            _authorRepository.Update(author);
 
             return RedirectToAction("List");
         }
 
         public IActionResult Create()
         {
-            return View();
+            var viewModel = new CreateAuthorViewModel
+            { Referer = Request.Headers["Referer"].ToString() };
+
+            return View(viewModel);
         }
+
         [HttpPost]
-        public IActionResult Create(Author authors)
+        public IActionResult Create(CreateAuthorViewModel authorVM)
         {
-            _authorRepository.Create(authors);
+            if (!ModelState.IsValid)
+            {
+                return View(authorVM);
+            }
+
+            _authorRepository.Create(authorVM.Author);
+
+            if (!String.IsNullOrEmpty(authorVM.Referer))
+            {
+                return Redirect(authorVM.Referer);
+            }
 
             return RedirectToAction("List");
         }
 
-        public IActionResult Delete()
-        {
-            return View();
-        }
-        [HttpPost]
         public IActionResult Delete(int id)
         {
-            var authors = _authorRepository.GetById(id);
-            _authorRepository.Delete(authors);
+            var author = _authorRepository.GetById(id);
+
+            _authorRepository.Delete(author);
 
             return RedirectToAction("List");
         }

@@ -8,7 +8,7 @@ namespace mySite2.Data.Interfaces
 {
     public interface IBookRepository : IRepository<Book>
     {
-        IEnumerable<Book> GetAllBooks();
+        IEnumerable<Book> GetAllWithAuthor();
         IEnumerable<Book> FindWithAutor(Func<Book, bool> predicate);
         IEnumerable<Book> FindWithAutorAndBorrower(Func<Book, bool> predicate);
     }

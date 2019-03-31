@@ -30,10 +30,10 @@ namespace mySite2.Data.Repository
                 .Where(predicate);
         }
 
-        public IEnumerable<Book> GetAllBooks()
+        public IEnumerable<Book> GetAllWithAuthor()
         {
             return _context.Books
-                .Include(a => a.Author);
+            .Include(a => a.Author);
         }
     }
 }
